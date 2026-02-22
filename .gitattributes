@@ -9,4 +9,3 @@ pint.json export-ignore
 phpunit.xml export-ignore
 /workbench export-ignore
 testbench.yaml.example export-ignore
-CLAUDE.md export-ignore
