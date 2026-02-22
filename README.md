@@ -22,8 +22,8 @@ The package leverages the powerful `revolution/laravel-google-sheets` dependency
 **Perfect for**: SEO tools, analytics dashboards, automated reporting, website monitoring, and any application that needs to access Google Search Console data programmatically.
 
 ## Requirements
-- PHP >= 8.2
-- Laravel >= 11.0
+- PHP >= 8.3
+- Laravel >= 12.0
 
 ## Installation
 

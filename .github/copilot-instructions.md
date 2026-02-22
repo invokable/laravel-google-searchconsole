@@ -22,8 +22,8 @@ This repository contains **invokable/laravel-google-searchconsole**, a Laravel p
 
 ## Key Technologies & Frameworks
 
-- **PHP**: ^8.2 (modern PHP features, typed properties, union types)
-- **Laravel**: ^11.0 || ^12.0 (Laravel framework integration)
+- **PHP**: ^8.3 (modern PHP features, typed properties, union types)
+- **Laravel**: ^12.0 (Laravel framework integration)
 - **Google APIs Client Library**: Via `revolution/laravel-google-sheets` dependency
 - **Testing**: PHPUnit with Orchestra Testbench for Laravel package testing
 - **Code Quality**: Laravel Pint for code formatting (Laravel preset)
