@@ -1,5 +1,7 @@
 <?php
 
+use Google\Service\Webmasters;
+
 return [
     /*
     |----------------------------------------------------------------------------
@@ -20,7 +22,7 @@ return [
     'client_id' => env('GOOGLE_CLIENT_ID', ''),
     'client_secret' => env('GOOGLE_CLIENT_SECRET', ''),
     'redirect_uri' => env('GOOGLE_REDIRECT', ''),
-    'scopes' => [\Google\Service\Webmasters::WEBMASTERS_READONLY],
+    'scopes' => [Webmasters::WEBMASTERS_READONLY],
     'access_type' => 'online',
     'approval_prompt' => 'auto',
 

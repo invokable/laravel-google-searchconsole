@@ -3,6 +3,7 @@
 namespace Tests;
 
 use Google\Service\Webmasters;
+use Illuminate\Foundation\Application;
 use Revolution\Google\Client\Facades\Google;
 use Revolution\Google\Client\Providers\GoogleServiceProvider;
 use Revolution\Google\SearchConsole\Facades\SearchConsole;
@@ -29,7 +30,7 @@ class TestCase extends \Orchestra\Testbench\TestCase
     /**
      * Define environment setup.
      *
-     * @param  \Illuminate\Foundation\Application  $app
+     * @param  Application  $app
      * @return void
      */
     protected function getEnvironmentSetUp($app)
