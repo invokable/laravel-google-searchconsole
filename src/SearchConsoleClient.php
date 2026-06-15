@@ -3,10 +3,10 @@
 namespace Revolution\Google\SearchConsole;
 
 use Google\Service;
-use Google\Service\Webmasters;
-use Google\Service\Webmasters\Resource\Searchanalytics;
-use Google\Service\Webmasters\Resource\Sites;
-use Google\Service\Webmasters\SearchAnalyticsQueryRequest;
+use Google\Service\SearchConsole;
+use Google\Service\SearchConsole\Resource\Searchanalytics;
+use Google\Service\SearchConsole\Resource\Sites;
+use Google\Service\SearchConsole\SearchAnalyticsQueryRequest;
 use Illuminate\Support\Traits\Macroable;
 use Revolution\Google\Client\Facades\Google;
 use Revolution\Google\SearchConsole\Contracts\Factory;
@@ -16,18 +16,18 @@ class SearchConsoleClient implements Factory
 {
     use Macroable;
 
-    protected ?Webmasters $service = null;
+    protected ?SearchConsole $service = null;
 
-    public function setService(Webmasters|Service $service): static
+    public function setService(SearchConsole|Service $service): static
     {
         $this->service = $service;
 
         return $this;
     }
 
-    public function getService(): Webmasters
+    public function getService(): SearchConsole
     {
-        return $this->service ?? Google::make('Webmasters');
+        return $this->service ?? Google::make('SearchConsole');
     }
 
     /**
@@ -43,7 +43,7 @@ class SearchConsoleClient implements Factory
             Google::fetchAccessTokenWithRefreshToken();
         }
 
-        return $this->setService(Google::make('Webmasters'));
+        return $this->setService(Google::make('SearchConsole'));
     }
 
     public function getAccessToken(): array

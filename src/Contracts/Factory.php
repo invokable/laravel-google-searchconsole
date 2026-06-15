@@ -3,16 +3,16 @@
 namespace Revolution\Google\SearchConsole\Contracts;
 
 use Google\Service;
-use Google\Service\Webmasters;
-use Google\Service\Webmasters\SearchAnalyticsQueryRequest;
+use Google\Service\SearchConsole;
+use Google\Service\SearchConsole\SearchAnalyticsQueryRequest;
 
 interface Factory
 {
     public function query(string $url, Query|SearchAnalyticsQueryRequest $query): object;
 
-    public function setService(Webmasters|Service $service): static;
+    public function setService(SearchConsole|Service $service): static;
 
-    public function getService(): Webmasters;
+    public function getService(): SearchConsole;
 
     /**
      * set access_token and set new service.

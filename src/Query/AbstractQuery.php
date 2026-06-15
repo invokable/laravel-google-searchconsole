@@ -2,7 +2,7 @@
 
 namespace Revolution\Google\SearchConsole\Query;
 
-use Google\Service\Webmasters\SearchAnalyticsQueryRequest;
+use Google\Service\SearchConsole\SearchAnalyticsQueryRequest;
 use Revolution\Google\SearchConsole\Contracts\Query;
 
 abstract class AbstractQuery extends SearchAnalyticsQueryRequest implements Query

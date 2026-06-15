@@ -2,8 +2,8 @@
 
 namespace Tests\Feature;
 
-use Google\Service\Webmasters;
-use Google\Service\Webmasters\Resource\Sites;
+use Google\Service\SearchConsole;
+use Google\Service\SearchConsole\Resource\Sites;
 use Mockery as m;
 use Revolution\Google\SearchConsole\SearchConsoleClient;
 use Tests\TestCase;
@@ -29,7 +29,7 @@ class SitesTest extends TestCase
 
     public function test_service_sites()
     {
-        $service = m::mock(Webmasters::class);
+        $service = m::mock(SearchConsole::class);
         $service->sites = m::mock(Sites::class);
 
         $photos = m::mock(SearchConsoleClient::class)->makePartial()->shouldAllowMockingProtectedMethods();

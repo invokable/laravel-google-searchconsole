@@ -2,7 +2,7 @@
 
 namespace Tests;
 
-use Google\Service\Webmasters;
+use Google\Service\SearchConsole as SearchConsoleService;
 use Illuminate\Foundation\Application;
 use Revolution\Google\Client\Facades\Google;
 use Revolution\Google\Client\Providers\GoogleServiceProvider;
@@ -49,7 +49,7 @@ class TestCase extends \Orchestra\Testbench\TestCase
                     $app['config']->set('google.service.file', $credentials);
 
                     // Set required scopes for Search Console
-                    $app['config']->set('google.scopes', [Webmasters::WEBMASTERS]);
+                    $app['config']->set('google.scopes', [SearchConsoleService::WEBMASTERS]);
 
                     // Set dummy OAuth values to prevent errors (not used with service account)
                     $app['config']->set('google.client_id', 'dummy');
@@ -66,7 +66,7 @@ class TestCase extends \Orchestra\Testbench\TestCase
                         $app['config']->set('google.service.file', $serviceAccountJson);
 
                         // Set required scopes for Search Console
-                        $app['config']->set('google.scopes', [Webmasters::WEBMASTERS]);
+                        $app['config']->set('google.scopes', [SearchConsoleService::WEBMASTERS]);
 
                         // Set dummy OAuth values to prevent errors (not used with service account)
                         $app['config']->set('google.client_id', 'dummy');

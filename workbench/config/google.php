@@ -1,6 +1,6 @@
 <?php
 
-use Google\Service\Webmasters;
+use Google\Service\SearchConsole;
 
 return [
     /*
@@ -22,7 +22,7 @@ return [
     'client_id' => env('GOOGLE_CLIENT_ID', ''),
     'client_secret' => env('GOOGLE_CLIENT_SECRET', ''),
     'redirect_uri' => env('GOOGLE_REDIRECT', ''),
-    'scopes' => [Webmasters::WEBMASTERS_READONLY],
+    'scopes' => [SearchConsole::WEBMASTERS_READONLY],
     'access_type' => 'online',
     'approval_prompt' => 'auto',
 

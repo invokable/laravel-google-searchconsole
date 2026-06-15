@@ -9,7 +9,7 @@ class SampleQuery extends AbstractQuery
     public function init(): void
     {
         $this->setDimensions(['query']);
-        $this->setAggregationType(['auto']);
+        $this->setAggregationType('auto');
         $this->setRowLimit(100);
     }
 }

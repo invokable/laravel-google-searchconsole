@@ -2,8 +2,8 @@
 
 namespace Tests\Feature;
 
-use Google\Service\Webmasters;
-use Google\Service\Webmasters\Resource\Searchanalytics;
+use Google\Service\SearchConsole;
+use Google\Service\SearchConsole\Resource\Searchanalytics;
 use Mockery as m;
 use Revolution\Google\SearchConsole\SearchConsoleClient;
 use Tests\Feature\Search\SampleQuery;
@@ -33,7 +33,7 @@ class AnalyticsTest extends TestCase
 
     public function test_service_search_analytics()
     {
-        $service = m::mock(Webmasters::class);
+        $service = m::mock(SearchConsole::class);
         $service->searchanalytics = m::mock(Searchanalytics::class);
 
         $photos = m::mock(SearchConsoleClient::class)->makePartial()->shouldAllowMockingProtectedMethods();

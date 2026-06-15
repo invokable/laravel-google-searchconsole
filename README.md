@@ -94,7 +94,7 @@ Add to `config/google.php`:
 'client_id'        => env('GOOGLE_CLIENT_ID'),
 'client_secret'    => env('GOOGLE_CLIENT_SECRET'),
 'redirect_uri'     => env('GOOGLE_REDIRECT_URI'),
-'scopes'           => [\Google\Service\Webmasters::WEBMASTERS],
+'scopes'           => [\Google\Service\SearchConsole::WEBMASTERS],
 'access_type'      => 'offline',
 'prompt'           => 'consent select_account',
 ```
@@ -125,7 +125,7 @@ The package automatically uses Service Account authentication when configured th
 Even for service accounts, scopes must be set in `config/google.php`:
 
 ```php
-'scopes' => [\Google\Service\Webmasters::WEBMASTERS],
+'scopes' => [\Google\Service\SearchConsole::WEBMASTERS],
 ```
 
 ### 3. Environment Variables for Service Account
@@ -164,7 +164,7 @@ This method is particularly well-suited for GitHub Actions deployment, as it all
 
 ## Creating Custom Queries
 
-All query classes extend `Revolution\Google\SearchConsole\Query\AbstractQuery`, which is a subclass of `Google\Service\Webmasters\SearchAnalyticsQueryRequest`. This provides access to all Google Search Console API query parameters.
+All query classes extend `Revolution\Google\SearchConsole\Query\AbstractQuery`, which is a subclass of `Google\Service\SearchConsole\SearchAnalyticsQueryRequest`. This provides access to all Google Search Console API query parameters.
 
 ### Generate Query Classes
 
@@ -248,7 +248,7 @@ $this->setDimensionFilterGroups([
 ```php
 $this->setRowLimit(100);                   // Limit results (max 25,000)
 $this->setStartRow(0);                     // Pagination offset
-$this->setAggregationType(['auto']);       // Aggregation type
+$this->setAggregationType('auto');       // Aggregation type
 $this->setDataState('final');              // 'final' or 'fresh' data
 ```
 

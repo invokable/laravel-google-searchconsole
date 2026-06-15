@@ -2,7 +2,7 @@
 
 namespace Revolution\Google\SearchConsole\Facades;
 
-use Google\Service\Webmasters\SearchAnalyticsQueryRequest;
+use Google\Service\SearchConsole\SearchAnalyticsQueryRequest;
 use Illuminate\Support\Facades\Facade;
 use Revolution\Google\SearchConsole\Contracts\Factory;
 use Revolution\Google\SearchConsole\Contracts\Query;
